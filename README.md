@@ -13,6 +13,7 @@ Go Fish app used to educate young children about numbers, shapes, colors, and st
 - MySQL
 - React
 - Materialize
+- SocketIO
 
 ## Links:
 
@@ -35,13 +36,4 @@ Go Fish app used to educate young children about numbers, shapes, colors, and st
 - [NodeJS](https://nodejs.org/docs/latest-v12.x/api/)
 - [ExpressJS](https://expressjs.com/en/starter/hello-world.html)
 - [Heroku](https://dashboard.heroku.com/apps)
-- [NoSQL](https://en.wikipedia.org/wiki/NoSQL)
-- [MongoDB Website](https://www.mongodb.com/)
-- [Robo 3T Website](https://robomongo.org/download)
-- [MongoJS Documentation](https://www.npmjs.com/package/mongojs)
-- [Mongoose Documentation](http://mongoosejs.com/docs/guide.html)
-- [Why Performance Matters](https://developers.google.com/web/fundamentals/performance/why-performance-matters/)
-- [Measure Web Performance With The RAIL Model](https://developers.google.com/web/fundamentals/performance/rail)
-- [Audit the Performance of Your Web Application](https://developers.google.com/web/fundamentals/performance/audit/)
-- [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/)
-- [Your First Progressive Web App](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/)
+- [SocketIO](https://socket.io/docs/)
