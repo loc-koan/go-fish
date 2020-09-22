@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 // import Background from "./components/Background";
-import OpponentsHand from "./components/OpponentsHand";
+// import OpponentsHand from "./components/OpponentsHand";
 // import Centerdeck from "./components/Centerdeck";
-import YourHand from "./components/YourHand";
+// import YourHand from "./components/YourHand";
 import data from "./data.json";
 
 function Game() {
@@ -14,7 +14,13 @@ function Game() {
     const shuffled = shuffleData(data)
     setPile(shuffled);
     console.log(shuffled);
-  },[]) 
+  },[]);
+
+  useEffect(() => {
+    const playerHand = pile.push
+    setPlayer(playerHand);
+    console.log(playerHand);
+  },[]);
 
 //   componentDidMount() {
 //     this.setState({ data: this.shuffleData(this.state.data) });
@@ -44,7 +50,7 @@ function Game() {
 //     return this.shuffleData(resetData);
 //   };
 
-function shuffleData (data) {
+  function shuffleData (data) {
     let i = data.length - 1;
     while (i > 0) {
       const j = Math.floor(Math.random() * (i + 1));
