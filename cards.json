@@ -1,0 +1,366 @@
+[
+  {
+    "value": 1,
+    "text": "ace",
+    "suit": "clubs",
+    "image": "/assets/images/AC.jpg",
+    "id": 1
+  },
+  {
+    "value": 1,
+    "text": "ace",
+    "suit": "diamonds",
+    "image": "/assets/images/AD.jpg",
+    "id": 2
+  },
+  {
+    "value": 1,
+    "text": "ace",
+    "suit": "hearts",
+    "image": "/assets/images/AH.jpg",
+    "id": 3
+  },
+  {
+    "value": 1,
+    "text": "ace",
+    "suit": "spades",
+    "image": "/assets/images/AS.jpg",
+    "id": 4
+  },
+  {
+    "value": 2,
+    "text": "two",
+    "suit": "clubs",
+    "image": "/assets/images/2C.jpg",
+    "id": 5
+  },
+  {
+    "value": 2,
+    "text": "two",
+    "suit": "diamonds",
+    "image": "/assets/images/2D.jpg",
+    "id": 6
+  },
+  {
+    "value": 2,
+    "text": "two",
+    "suit": "hearts",
+    "image": "/assets/images/2H.jpg",
+    "id": 7
+  },
+  {
+    "value": 2,
+    "text": "two",
+    "suit": "spades",
+    "image": "/assets/images/2S.jpg",
+    "id": 8
+  },
+  {
+    "value": 3,
+    "text": "three",
+    "suit": "clubs",
+    "image": "/assets/images/3C.jpg",
+    "id": 9
+  },
+  {
+    "value": 3,
+    "text": "three",
+    "suit": "diamonds",
+    "image": "/assets/images/3D.jpg",
+    "id": 10
+  },
+  {
+    "value": 3,
+    "text": "three",
+    "suit": "hearts",
+    "image": "/assets/images/3H.jpg",
+    "id": 11
+  },
+  {
+    "value": 3,
+    "text": "three",
+    "suit": "spades",
+    "image": "/assets/images/3S.jpg",
+    "id": 12
+  },
+  {
+    "value": 4,
+    "text": "four",
+    "suit": "clubs",
+    "image": "/assets/images/4C.jpg",
+    "id": 13
+  },
+  {
+    "value": 4,
+    "text": "four",
+    "suit": "diamonds",
+    "image": "/assets/images/4D.jpg",
+    "id": 14
+  },
+  {
+    "value": 4,
+    "text": "four",
+    "suit": "hearts",
+    "image": "/assets/images/4H.jpg",
+    "id": 15
+  },
+  {
+    "value": 4,
+    "text": "four",
+    "suit": "spades",
+    "image": "/assets/images/4S.jpg",
+    "id": 16
+  },
+  {
+    "value": 5,
+    "text": "five",
+    "suit": "clubs",
+    "image": "/assets/images/5C.jpg",
+    "id": 17
+  },
+  {
+    "value": 5,
+    "text": "five",
+    "suit": "diamonds",
+    "image": "/assets/images/5D.jpg",
+    "id": 18
+  },
+  {
+    "value": 5,
+    "text": "five",
+    "suit": "hearts",
+    "image": "/assets/images/5H.jpg",
+    "id": 19
+  },
+  {
+    "value": 5,
+    "text": "five",
+    "suit": "spades",
+    "image": "/assets/images/5S.jpg",
+    "id": 20
+  },
+  {
+    "value": 6,
+    "text": "six",
+    "suit": "clubs",
+    "image": "/assets/images/6C.jpg",
+    "id": 21
+  },
+  {
+    "value": 6,
+    "text": "six",
+    "suit": "diamonds",
+    "image": "/assets/images/6D.jpg",
+    "id": 22
+  },
+  {
+    "value": 6,
+    "text": "six",
+    "suit": "hearts",
+    "image": "/assets/images/6H.jpg",
+    "id": 23
+  },
+  {
+    "value": 6,
+    "text": "six",
+    "suit": "spades",
+    "image": "/assets/images/6S.jpg",
+    "id": 24
+  },
+  {
+    "value": 7,
+    "text": "seven",
+    "suit": "clubs",
+    "image": "/assets/images/7C.jpg",
+    "id": 25
+  },
+  {
+    "value": 7,
+    "text": "seven",
+    "suit": "diamonds",
+    "image": "/assets/images/7D.jpg",
+    "id": 26
+  },
+  {
+    "value": 7,
+    "text": "seven",
+    "suit": "hearts",
+    "image": "/assets/images/7H.jpg",
+    "id": 27
+  },
+  {
+    "value": 7,
+    "text": "seven",
+    "suit": "spades",
+    "image": "/assets/images/7S.jpg",
+    "id": 28
+  },
+  {
+    "value": 8,
+    "text": "eight",
+    "suit": "clubs",
+    "image": "/assets/images/8C.jpg",
+    "id": 29
+  },
+  {
+    "value": 8,
+    "text": "eight",
+    "suit": "diamonds",
+    "image": "/assets/images/8D.jpg",
+    "id": 30
+  },
+  {
+    "value": 8,
+    "text": "eight",
+    "suit": "hearts",
+    "image": "/assets/images/8H.jpg",
+    "id": 31
+  },
+  {
+    "value": 8,
+    "text": "eight",
+    "suit": "spades",
+    "image": "/assets/images/8S.jpg",
+    "id": 32
+  },
+  {
+    "value": 9,
+    "text": "nine",
+    "suit": "clubs",
+    "image": "/assets/images/9C.jpg",
+    "id": 33
+  },
+  {
+    "value": 9,
+    "text": "nine",
+    "suit": "diamonds",
+    "image": "/assets/images/9D.jpg",
+    "id": 34
+  },
+  {
+    "value": 9,
+    "text": "nine",
+    "suit": "hearts",
+    "image": "/assets/images/9H.jpg",
+    "id": 35
+  },
+  {
+    "value": 9,
+    "text": "nine",
+    "suit": "spades",
+    "image": "/assets/images/9S.jpg",
+    "id": 36
+  },
+  {
+    "value": 10,
+    "text": "ten",
+    "suit": "clubs",
+    "image": "/assets/images/10C.jpg",
+    "id": 37
+  },
+  {
+    "value": 10,
+    "text": "ten",
+    "suit": "diamonds",
+    "image": "/assets/images/10D.jpg",
+    "id": 38
+  },
+  {
+    "value": 10,
+    "text": "ten",
+    "suit": "hearts",
+    "image": "/assets/images/10H.jpg",
+    "id": 39
+  },
+  {
+    "value": 10,
+    "text": "ten",
+    "suit": "spades",
+    "image": "/assets/images/10S.jpg",
+    "id": 40
+  },
+  {
+    "value": 11,
+    "text": "jack",
+    "suit": "clubs",
+    "image": "/assets/images/JC.jpg",
+    "id": 41
+  },
+  {
+    "value": 11,
+    "text": "jack",
+    "suit": "diamonds",
+    "image": "/assets/images/JD.jpg",
+    "id": 42
+  },
+  {
+    "value": 11,
+    "text": "jack",
+    "suit": "hearts",
+    "image": "/assets/images/JH.jpg",
+    "id": 43
+  },
+  {
+    "value": 11,
+    "text": "jack",
+    "suit": "spades",
+    "image": "/assets/images/JS.jpg",
+    "id": 44
+  },
+  {
+    "value": 12,
+    "text": "queen",
+    "suit": "clubs",
+    "image": "/assets/images/QC.jpg",
+    "id": 45
+  },
+  {
+    "value": 12,
+    "text": "queen",
+    "suit": "diamonds",
+    "image": "/assets/images/QD.jpg",
+    "id": 46
+  },
+  {
+    "value": 12,
+    "text": "queen",
+    "suit": "hearts",
+    "image": "/assets/images/QH.jpg",
+    "id": 47
+  },
+  {
+    "value": 12,
+    "text": "queen",
+    "suit": "spades",
+    "image": "/assets/images/QS.jpg",
+    "id": 48
+  },
+  {
+    "value": 13,
+    "text": "king",
+    "suit": "clubs",
+    "image": "/assets/images/KC.jpg",
+    "id": 49
+  },
+  {
+    "value": 13,
+    "text": "king",
+    "suit": "diamonds",
+    "image": "/assets/images/KD.jpg",
+    "id": 50
+  },
+  {
+    "value": 13,
+    "text": "king",
+    "suit": "hearts",
+    "image": "/assets/images/KH.jpg",
+    "id": 51
+  },
+  {
+    "value": 13,
+    "text": "king",
+    "suit": "spades",
+    "image": "/assets/images/KS.jpg",
+    "id": 52
+  }
+]
