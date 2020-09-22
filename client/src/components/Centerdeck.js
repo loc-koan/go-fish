@@ -5,7 +5,7 @@ function Centerdeck() {
     return (
       <div className = "centerDeck">
         <div>
-            <a className = "btn">Card Deck Here</a>
+            <a className = "btn">Centerdeck</a>
         </div>
       </div>
     )
