@@ -9,24 +9,42 @@ function Game() {
   const [computer, setComputer] = useState({});
   const [player, setPlayer] = useState({});
   const [pile, setPile] = useState([]);
-
-  let shuffled = shuffleData(data);
-  let playerHand = pile.pop();
-  console.log("--------------");
-  console.log(playerHand);
-
+  const [playerHand, setPlayerHand] = useState([]);
+  const [finishedShuffling, setfinishedShuffling] = useState(false);
+  
   useEffect(() => {
-    // const shuffled = shuffleData(data);
+    const shuffled = shuffleData(data);
     setPile(shuffled);
-    console.log(shuffled);
+    setfinishedShuffling(true);
   },[]);
 
-  console.log(shuffled);
-  // useEffect(() => {
-  //   const playerHand = pile.push
-  //   setPlayer(playerHand);
-  //   console.log(playerHand);
-  // },[]);
+  function shuffleData (data) {
+    let i = data.length - 1;
+    while (i > 0) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = data[i];
+      data[i] = data[j];
+      data[j] = temp;
+      i--;
+    }
+    return data;
+  };
+
+  useEffect(() => {
+    if (finishedShuffling) {
+      setPlayer(playerHandIntial);
+      console.log(player);
+    }
+  },[finishedShuffling]);
+
+  function playerHandIntial () {
+    let hand = [];
+    console.log(pile);
+    for (var i = 0; i < 4; i++) {
+      hand.push(pile.shift());
+    }
+    setPlayerHand(hand);
+  };
 
 //   componentDidMount() {
 //     this.setState({ data: this.shuffleData(this.state.data) });
@@ -55,18 +73,6 @@ function Game() {
 //     const resetData = data.map(item => ({ ...item, clicked: false }));
 //     return this.shuffleData(resetData);
 //   };
-
-  function shuffleData (data) {
-    let i = data.length - 1;
-    while (i > 0) {
-      const j = Math.floor(Math.random() * (i + 1));
-      const temp = data[i];
-      data[i] = data[j];
-      data[j] = temp;
-      i--;
-    }
-    return data;
-  };
 
 //   handleItemClick = id => {
 //     let guessedCorrectly = false;
