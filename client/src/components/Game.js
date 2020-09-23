@@ -10,17 +10,23 @@ function Game() {
   const [player, setPlayer] = useState({});
   const [pile, setPile] = useState([]);
 
+  let shuffled = shuffleData(data);
+  let playerHand = pile.pop();
+  console.log("--------------");
+  console.log(playerHand);
+
   useEffect(() => {
-    const shuffled = shuffleData(data)
+    // const shuffled = shuffleData(data);
     setPile(shuffled);
     console.log(shuffled);
   },[]);
 
-  useEffect(() => {
-    const playerHand = pile.push
-    setPlayer(playerHand);
-    console.log(playerHand);
-  },[]);
+  console.log(shuffled);
+  // useEffect(() => {
+  //   const playerHand = pile.push
+  //   setPlayer(playerHand);
+  //   console.log(playerHand);
+  // },[]);
 
 //   componentDidMount() {
 //     this.setState({ data: this.shuffleData(this.state.data) });
