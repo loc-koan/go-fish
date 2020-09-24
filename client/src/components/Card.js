@@ -2,8 +2,8 @@ import React from "react";
 
 function Card(props) {
   return (
-    <div className = "btn">
-      <img src={props.image}></img>
+    <div className="col s2">
+      <buton><img src={props.image}></img></buton>
     </div>
   )
 }

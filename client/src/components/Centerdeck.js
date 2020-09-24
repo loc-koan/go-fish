@@ -4,8 +4,10 @@ import "../styles/Centerdeck.css";
 
 function Centerdeck(props) {
     return (
-      <div className = "centerDeck container row center">
+      <div className="container">
+      <div className = "centerDeck row center">
         <Card image = "/assets/images/backs_blue.png" />
+      </div>
       </div>
     );
 }
