@@ -6,12 +6,14 @@ import React, { useState, useEffect } from "react";
 import data from "./data.json";
 
 function Game() {
-  const [computer, setComputer] = useState({});
-  const [player, setPlayer] = useState({});
+  const [computer, setComputer] = useState("");
+  const [player, setPlayer] = useState("");
   const [pile, setPile] = useState([]);
   const [playerHand, setPlayerHand] = useState([]);
+  const [computerHand, setComputerHand] = useState([]);
   const [finishedShuffling, setfinishedShuffling] = useState(false);
   
+  /* initial shuffling */ 
   useEffect(() => {
     const shuffled = shuffleData(data);
     setPile(shuffled);
@@ -30,6 +32,7 @@ function Game() {
     return data;
   };
 
+  /* initial deal to player1 */ 
   useEffect(() => {
     if (finishedShuffling) {
       setPlayer(playerHandIntial);
@@ -40,10 +43,27 @@ function Game() {
   function playerHandIntial () {
     let hand = [];
     console.log(pile);
-    for (var i = 0; i < 4; i++) {
+    for (var i = 0; i < 5; i++) {
       hand.push(pile.shift());
     }
     setPlayerHand(hand);
+  };
+
+  /* initial deal to computer */ 
+  useEffect(() => {
+    if (finishedShuffling) {
+      setComputer(computerHandIntial);
+      console.log(player);
+    }
+  },[finishedShuffling]);
+
+  function computerHandIntial () {
+    let hand = [];
+    console.log(pile);
+    for (var i = 0; i < 5; i++) {
+      hand.push(pile.shift());
+    }
+    setComputerHand(hand);
   };
 
 //   componentDidMount() {
