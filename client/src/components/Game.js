@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-// import Background from "./components/Background";
-// import OpponentsHand from "./components/OpponentsHand";
-// import Centerdeck from "./components/Centerdeck";
-// import YourHand from "./components/YourHand";
+import Background from "./Background";
+import OpponentsHand from "./OpponentsHand";
+import Centerdeck from "./Centerdeck";
+import YourHand from "./YourHand";
 import data from "./data.json";
 
 function Game() {
@@ -53,7 +53,7 @@ function Game() {
   useEffect(() => {
     if (finishedShuffling) {
       setComputer(computerHandIntial);
-      console.log(player);
+      console.log(computer);
     }
   },[finishedShuffling]);
 
@@ -110,7 +110,15 @@ function Game() {
 //       ? this.handleCorrectGuess(newData)
 //       : this.handleIncorrectGuess(newData);
 //   };
-return (<h1>test</h1>);
+
+  return (
+    <div>
+      <Background />
+      <OpponentsHand cards={computerHand}/>
+      <Centerdeck cards={pile}/>
+      <YourHand cards={playerHand}/> 
+    </div>
+  );
 
 }
 

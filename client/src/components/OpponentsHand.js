@@ -1,12 +1,18 @@
 import React from "react";
+import Card from "./Card";
 import "../styles/OpponentsHand.css";
 
-function OpponentsHand() {
+function OpponentsHand(props) {
     return (
-      <div className = "opponentsHand">
-        <div>
-            <a className = "btn">Opponents Hand</a>
-        </div>
+      <div className = "opponentsHand container row center">
+        {
+          props.cards.map((card) => {
+            return (<Card key = {card.id} 
+                          image = "/assets/images/backs_blue.png"
+                          value = {card.value} 
+                    />)
+          })
+        }
       </div>
     )
 }

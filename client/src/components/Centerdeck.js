@@ -1,14 +1,13 @@
 import React from "react";
+import Card from "./Card";
 import "../styles/Centerdeck.css";
 
-function Centerdeck() {
+function Centerdeck(props) {
     return (
-      <div className = "centerDeck">
-        <div>
-            <a className = "btn">Centerdeck</a>
-        </div>
+      <div className = "centerDeck container row center">
+        <Card image = "/assets/images/backs_blue.png" />
       </div>
-    )
+    );
 }
 
 export default Centerdeck;

@@ -3,7 +3,7 @@
     "value": 1,
     "text": "ace",
     "suit": "clubs",
-    "image": "../public/assets/images/AC.jpg",
+    "image": "/assets/images/AC.jpg",
     "id": 1
   },
   {
