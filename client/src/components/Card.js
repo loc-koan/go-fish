@@ -1,11 +1,11 @@
 import React from "react";
 
 function Card(props) {
-    return (
-      <div className = "card col">
-        <img src={props.image}></img>
-      </div>
-    )
+  return (
+    <div className = "btn">
+      <img src={props.image}></img>
+    </div>
+  )
 }
 
 export default Card;
