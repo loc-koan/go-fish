@@ -8,8 +8,10 @@ function OpponentsHand(props) {
         {
           props.cards.map((card) => {
             return (<Card key = {card.id} 
-                          image = "/assets/images/backs_blue.png"
+                          image = "/assets/images/backs_blue.png" 
                           value = {card.value} 
+                          text = {card.text}
+                          suit = {card.suit}
                     />)
           })
         }

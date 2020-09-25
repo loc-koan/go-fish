@@ -11,7 +11,8 @@ function YourHand(props) {
                           image = {card.image} 
                           value = {card.value} 
                           text = {card.text}
-                          suit = {card.suit}/>)
+                          suit = {card.suit}
+                    />)
           })
         }
       </div>
