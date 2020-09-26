@@ -2,7 +2,7 @@
 
 ## Description
 
-Go Fish app used to educate young children about numbers, shapes, colors, and strategy.  The user will compete against computers and score is kept track via MySQL.
+Go Fish app used to educate young children about numbers, shapes, colors, and strategy.  A deck of 52 playing cards are shuffled and dealt between users.  Collect the most pairs to win the competition.  The user will compete against computers and score is kept track via MySQL.
 
 ## Live:
 
@@ -11,7 +11,9 @@ Go Fish app used to educate young children about numbers, shapes, colors, and st
 ## Key Features:
 
 - MySQL
+- Express.js
 - React
+- Node.js
 - Materialize
 - SocketIO
 
@@ -33,7 +35,9 @@ Go Fish app used to educate young children about numbers, shapes, colors, and st
 
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/Tutorials)
 - [W3Schools](https://www.w3schools.com/)
-- [NodeJS](https://nodejs.org/docs/latest-v12.x/api/)
+- [MySQL](https://dev.mysql.com/doc/)
 - [ExpressJS](https://expressjs.com/en/starter/hello-world.html)
+- [React](https://reactjs.org/docs/getting-started.html)
+- [NodeJS](https://nodejs.org/docs/latest-v12.x/api/)
 - [Heroku](https://dashboard.heroku.com/apps)
 - [SocketIO](https://socket.io/docs/)

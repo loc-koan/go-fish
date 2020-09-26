@@ -36,13 +36,13 @@ function Game() {
   useEffect(() => {
     if (finishedShuffling) {
       setPlayer(playerHandIntial);
-      console.log(player);
+      // console.log(player);
     }
   },[finishedShuffling]);
 
   function playerHandIntial () {
     let hand = [];
-    console.log(pile);
+    // console.log(pile);
     for (var i = 0; i < 5; i++) {
       hand.push(pile.shift());
     }
@@ -53,18 +53,33 @@ function Game() {
   useEffect(() => {
     if (finishedShuffling) {
       setComputer(computerHandIntial);
-      console.log(computer);
+      // console.log(computer);
     }
   },[finishedShuffling]);
 
   function computerHandIntial () {
     let hand = [];
-    console.log(pile);
+    // console.log(pile);
     for (var i = 0; i < 5; i++) {
       hand.push(pile.shift());
     }
     setComputerHand(hand);
   };
+
+// console.log(player); /* undefined */ 
+// console.log(computer); /* undefined */ 
+
+// console.log(playerHand);
+// console.log(computerHand);
+
+// console.log(setPlayerHand); /* endless loop */ 
+// console.log(setComputerHand); /* endless loop */
+
+  function pairCheck () {
+    playerHand.sort((a, b) => (a.value > b.value) ? 1 : -1)
+  };
+
+  console.log(pairCheck(playerHand));
 
 //   componentDidMount() {
 //     this.setState({ data: this.shuffleData(this.state.data) });
