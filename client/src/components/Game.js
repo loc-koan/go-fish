@@ -13,7 +13,10 @@ function Game() {
   const [computerHand, setComputerHand] = useState([]);
   const [finishedShuffling, setfinishedShuffling] = useState(false);
   const [chosenCard, setChosenCard] = useState("");
-  const [humanTurn, setHumanTurn] = setState(true);
+  const [humanTurn, setHumanTurn] = useState(true);
+  const [humanPairPoint, setHumanPairPoint] = useState();
+  const [computerPairPoint, setComputerPairPoint] = useState();
+  const [discardPile, setDiscardPile] = useState([]);
 
   /* initial shuffling */ 
   useEffect(() => {
@@ -85,86 +88,43 @@ function Game() {
   console.log(orderCards(playerHand));
   console.log(orderCards(computerHand));
 
-  function removePairs () { /* checks for matches in hand, removes cards and adds to pair pile*/ 
-    if (humanTurn) {
-      playerHand.forEach(card => {
-        if (card.value === chosenCard.value) {
-           setPlayerHand(playerHand.filter(card => card.value !== chosenCard.value))
-           // add point to pair state
-           // remove card using filter
-           // draw new card, deckAddition
-           // boolean for humanTurn
-        } else {}
+  function removePairs () {
+    if(humanTurn) {
+      const pair = playerHand.filter(card => card.value === chosenCard.value);
+      if(pair.length > 0) {
+        const remainingDeck = playerHand.filter(card => card.value !== chosenCard.value);
+        setPlayerHand(remainingDeck);
+        setHumanPairPoint(pair);
+        setHumanTurn(false);
+      } else {
+        // go fish
+        deckAdditionPlayer(playerHand);
+        setHumanTurn(false);
       }
     }
+  }
+
+  function deckAdditionPlayer () { /* after go fish, pushes new card into player hand */ 
+    setPlayerHand([...playerHand, pile.shift()]);
   };
 
-  function deckAddition () { /* after go fish, pushes new card into hand */ 
-    pile.shift();
-  };
-
-  function setHumanTurn () {
-    humanTurn ? true : false;
-    humanTurn: !humanTurn;
+  function deckAdditionComputer () { /* after go fish, pushes new card into computer hand */ 
+    setComputerHand([...computerHand, pile.shift()]);
   };
 
   function playerRequest (event) { /* player picks card, asks computer for it */ 
     const card = event.target.value;
-    setchosenCard(card);
+    setChosenCard(card);
   };
 
   function computerRequest () { /* computer picks random card, asks player for it */ 
-    
+    // onClick
+    // removePairs ()
   };
 
   function calculateWinner () { /* determines winner */ 
 
   };
-
-//   componentDidMount() {
-//     this.setState({ data: this.shuffleData(this.state.data) });
-//   }
-
-//   handleCorrectGuess = newData => {
-//     const { topScore, score } = this.state;
-//     const newScore = score + 1;
-//     const newTopScore = Math.max(newScore, topScore);
-
-//     this.setState({
-//       data: this.shuffleData(newData),
-//       score: newScore,
-//       topScore: newTopScore
-//     });
-//   };
-
-//   handleIncorrectGuess = data => {
-//     this.setState({
-//       data: this.resetData(data),
-//       score: 0
-//     });
-//   };
-
-//   resetData = data => {
-//     const resetData = data.map(item => ({ ...item, clicked: false }));
-//     return this.shuffleData(resetData);
-//   };
-
-//   handleItemClick = id => {
-//     let guessedCorrectly = false;
-//     const newData = this.state.data.map(item => {
-//       const newItem = { ...item };
-//       if (newItem.id === id) {
-//         if (!newItem.clicked) {
-//           newItem.clicked = true;
-//           guessedCorrectly = true;
-//         }
-//       }
-//       return newItem;
-//     });
-//     guessedCorrectly
-//       ? this.handleCorrectGuess(newData)
-//       : this.handleIncorrectGuess(newData);
-//   };
 
   return (
     <div>
