@@ -75,11 +75,33 @@ function Game() {
 // console.log(setPlayerHand); /* endless loop */ 
 // console.log(setComputerHand); /* endless loop */
 
-  function pairCheck () {
-    playerHand.sort((a, b) => (a.value > b.value) ? 1 : -1)
+  function orderCards () {
+    playerHand.sort((a, b) => (a.value > b.value) ? 1 : -1);
+    computerHand.sort((a, b) => (a.value > b.value) ? 1 : -1);
   };
 
-  console.log(pairCheck(playerHand));
+  console.log(orderCards(playerHand));
+  console.log(orderCards(computerHand));
+
+  function removePairs () { /* checks for matches in hand, removes cards and adds to pair pile*/ 
+
+  };
+
+  function deckAddition () { /* after go fish, pushes new card into hand */ 
+
+  };
+
+  function playerRequest () { /* player picks card, asks computer for it */ 
+
+  };
+
+  function computerRequest () { /* computer picks random card, asks player for it */ 
+
+  };
+
+  function calculateWinner () { /* determines winner */ 
+
+  };
 
 //   componentDidMount() {
 //     this.setState({ data: this.shuffleData(this.state.data) });
