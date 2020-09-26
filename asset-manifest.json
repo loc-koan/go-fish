@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/go-fish/static/css/main.f14eac9b.chunk.css",
+    "main.js": "/go-fish/static/js/main.6b54d9a1.chunk.js",
+    "main.js.map": "/go-fish/static/js/main.6b54d9a1.chunk.js.map",
+    "runtime-main.js": "/go-fish/static/js/runtime-main.6c6f1101.js",
+    "runtime-main.js.map": "/go-fish/static/js/runtime-main.6c6f1101.js.map",
+    "static/js/2.021d4f26.chunk.js": "/go-fish/static/js/2.021d4f26.chunk.js",
+    "static/js/2.021d4f26.chunk.js.map": "/go-fish/static/js/2.021d4f26.chunk.js.map",
+    "index.html": "/go-fish/index.html",
+    "precache-manifest.1e34e49dd2be674b8260370466bc73b9.js": "/go-fish/precache-manifest.1e34e49dd2be674b8260370466bc73b9.js",
+    "service-worker.js": "/go-fish/service-worker.js",
+    "static/css/main.f14eac9b.chunk.css.map": "/go-fish/static/css/main.f14eac9b.chunk.css.map",
+    "static/js/2.021d4f26.chunk.js.LICENSE.txt": "/go-fish/static/js/2.021d4f26.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6c6f1101.js",
+    "static/js/2.021d4f26.chunk.js",
+    "static/css/main.f14eac9b.chunk.css",
+    "static/js/main.6b54d9a1.chunk.js"
+  ]
+}
