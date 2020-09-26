@@ -12,7 +12,9 @@ function Game() {
   const [playerHand, setPlayerHand] = useState([]);
   const [computerHand, setComputerHand] = useState([]);
   const [finishedShuffling, setfinishedShuffling] = useState(false);
-  
+  const [chosenCard, setChosenCard] = useState("");
+  const [humanTurn, setHumanTurn] = setState(true);
+
   /* initial shuffling */ 
   useEffect(() => {
     const shuffled = shuffleData(data);
@@ -84,19 +86,35 @@ function Game() {
   console.log(orderCards(computerHand));
 
   function removePairs () { /* checks for matches in hand, removes cards and adds to pair pile*/ 
-
+    if (humanTurn) {
+      playerHand.forEach(card => {
+        if (card.value === chosenCard.value) {
+           setPlayerHand(playerHand.filter(card => card.value !== chosenCard.value))
+           // add point to pair state
+           // remove card using filter
+           // draw new card, deckAddition
+           // boolean for humanTurn
+        } else {}
+      }
+    }
   };
 
   function deckAddition () { /* after go fish, pushes new card into hand */ 
-
+    pile.shift();
   };
 
-  function playerRequest () { /* player picks card, asks computer for it */ 
+  function setHumanTurn () {
+    humanTurn ? true : false;
+    humanTurn: !humanTurn;
+  };
 
+  function playerRequest (event) { /* player picks card, asks computer for it */ 
+    const card = event.target.value;
+    setchosenCard(card);
   };
 
   function computerRequest () { /* computer picks random card, asks player for it */ 
-
+    
   };
 
   function calculateWinner () { /* determines winner */ 
