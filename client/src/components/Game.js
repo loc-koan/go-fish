@@ -13,6 +13,7 @@ function Game() {
   const [computerHand, setComputerHand] = useState([]);
   const [finishedShuffling, setfinishedShuffling] = useState(false);
   const [chosenCard, setChosenCard] = useState("");
+  const [computerChosenCard, setcomputerChosenCard] = useState("");
   const [humanTurn, setHumanTurn] = useState(true);
   const [humanPairPoint, setHumanPairPoint] = useState();
   const [computerPairPoint, setComputerPairPoint] = useState();
@@ -80,27 +81,27 @@ function Game() {
 // console.log(setPlayerHand); /* endless loop */ 
 // console.log(setComputerHand); /* endless loop */
 
-  function orderCards () {
-    playerHand.sort((a, b) => (a.value > b.value) ? 1 : -1);
-    computerHand.sort((a, b) => (a.value > b.value) ? 1 : -1);
-  };
+  // function orderCards () {
+  //   playerHand.sort((a, b) => (a.value > b.value) ? 1 : -1);
+  //   computerHand.sort((a, b) => (a.value > b.value) ? 1 : -1);
+  // };
 
   // console.log(orderCards(playerHand));
   // console.log(orderCards(computerHand));
 
   function removePairs (chosenCard) {
     if(humanTurn) {
-      const pair = playerHand.filter(card => card.value === chosenCard.value);
+      const pair = computerHand.filter(card => card.value === chosenCard.value);
       console.log(pair);
-      if(pair.length >= 2) {
-        const remainingDeck = playerHand.filter(card => card.value !== chosenCard.value);
+      if(pair.length >= 1) {
+        const remainingDeck = computerHand.filter(card => card.value !== chosenCard.value);
         setPlayerHand(remainingDeck);
         setHumanPairPoint(pair);
-        setHumanTurn(false);
+        setHumanTurn(true);
       } else {
         // go fish
-        deckAdditionPlayer(playerHand);
-        setHumanTurn(false);
+        deckAdditionPlayer(computerHand);
+        setHumanTurn(true);
       }
     }
   }
@@ -122,6 +123,19 @@ function Game() {
   function computerRequest () { /* computer picks random card, asks player for it */ 
     // mathRandom on hand, that chosen card is requested from player
     // removePairs ()
+    if(!humanTurn) {
+      const pair = computerHand.filter(card => card.value === computerChosenCard.value);
+      if(pair.length >= 1) {
+        const remainingDeck = computerHand.filter(card => card.value !== computerChosenCard.value);
+        setComputerHand(remainingDeck);
+        setComputerPairPoint(pair);
+        setHumanTurn(false);
+      } else {
+        // go fish
+        deckAdditionComputer(computerHand);
+        setHumanTurn(false);
+      }
+    }
   };
 
   function calculateWinner () { /* determines winner */ 
