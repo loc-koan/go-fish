@@ -85,13 +85,14 @@ function Game() {
     computerHand.sort((a, b) => (a.value > b.value) ? 1 : -1);
   };
 
-  console.log(orderCards(playerHand));
-  console.log(orderCards(computerHand));
+  // console.log(orderCards(playerHand));
+  // console.log(orderCards(computerHand));
 
-  function removePairs () {
+  function removePairs (chosenCard) {
     if(humanTurn) {
       const pair = playerHand.filter(card => card.value === chosenCard.value);
-      if(pair.length > 0) {
+      console.log(pair);
+      if(pair.length >= 2) {
         const remainingDeck = playerHand.filter(card => card.value !== chosenCard.value);
         setPlayerHand(remainingDeck);
         setHumanPairPoint(pair);
@@ -112,13 +113,14 @@ function Game() {
     setComputerHand([...computerHand, pile.shift()]);
   };
 
-  function playerRequest (event) { /* player picks card, asks computer for it */ 
-    const card = event.target.value;
+  function playerRequest (card) { /* player picks card, asks computer for it */ 
     setChosenCard(card);
+    console.log(card);
+    removePairs(card);
   };
 
   function computerRequest () { /* computer picks random card, asks player for it */ 
-    // onClick
+    // mathRandom on hand, that chosen card is requested from player
     // removePairs ()
   };
 
@@ -131,7 +133,7 @@ function Game() {
       <Background />
       <OpponentsHand cards={computerHand}/>
       <Centerdeck cards={pile}/>
-      <YourHand cards={playerHand}/> 
+      <YourHand playerRequest={playerRequest} cards={playerHand}/> 
     </div>
   );
 

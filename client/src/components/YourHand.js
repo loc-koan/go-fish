@@ -12,6 +12,8 @@ function YourHand(props) {
                           value = {card.value} 
                           text = {card.text}
                           suit = {card.suit}
+                          card = {card}
+                          playerRequest = {props.playerRequest}
                     />)
           })
         }
