@@ -91,16 +91,16 @@ function Game() {
 
   function removePairs (chosenCard) {
     if(humanTurn) {
-      const pair = computerHand.filter(card => card.value === chosenCard.value);
+      const pair = playerHand.filter(card => card.value === chosenCard.value);
       console.log(pair);
-      if(pair.length >= 1) {
-        const remainingDeck = computerHand.filter(card => card.value !== chosenCard.value);
+      if(pair.length >= 2) {
+        const remainingDeck = playerHand.filter(card => card.value !== chosenCard.value);
         setPlayerHand(remainingDeck);
         setHumanPairPoint(pair);
         setHumanTurn(true);
       } else {
-        // go fish
-        deckAdditionPlayer(computerHand);
+        alert("Go Fish");
+        deckAdditionPlayer(playerHand);
         setHumanTurn(true);
       }
     }
@@ -122,16 +122,17 @@ function Game() {
 
   function computerRequest () { /* computer picks random card, asks player for it */ 
     // mathRandom on hand, that chosen card is requested from player
-    // removePairs ()
+    computerChosenCard = computerHand[(Math.floor(Math.random() * computerHand.length))];
+    console.log(computerHand);
     if(!humanTurn) {
       const pair = computerHand.filter(card => card.value === computerChosenCard.value);
-      if(pair.length >= 1) {
+      if(pair.length >= 2) {
         const remainingDeck = computerHand.filter(card => card.value !== computerChosenCard.value);
         setComputerHand(remainingDeck);
         setComputerPairPoint(pair);
         setHumanTurn(false);
       } else {
-        // go fish
+        alert("Go Fish");
         deckAdditionComputer(computerHand);
         setHumanTurn(false);
       }
