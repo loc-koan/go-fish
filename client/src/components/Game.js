@@ -145,14 +145,17 @@ function Game() {
     //   case 0:
     //     humanPairPoint > computerPairPoint;
     //     alert("you win");
+    /*     add point to win column of go_fish_stats in go_fish_db */
     //     break;
     //   case 1:
     //     humanPairPoint = computerPairPoint;
     //     alert("tie");
+    /*     add point to tie column of go_fish_stats in go_fish_db */
     //     break;
     //   case 2:
     //     humanPairPoint < computerPairPoint;
     //     alert("you lost");
+    /*     add point to tie column of go_fish_stats in go_fish_db */
     //     break;
     //   default:
     //     alert("please refresh the page");

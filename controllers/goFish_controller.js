@@ -1,14 +1,16 @@
-/* go fish controller file */
+/* go fish controller file - from burger express homework */
+ /* no routes as of yet, add one day */ 
+ 
 var express = require("express");
 
 var router = express.Router();
 
-/* Import the model (burger.js) to use its database functions */
-var burger = require("../models/goFish_models.js");
+/* Import the model (goFish.js) to use its database functions */
+var goFish = require("../models/goFish_models.js");
 
 /* Create all our routes and set up logic within those routes where required */
 router.get("/", function(req, res) {
-  burger.all(function(data) {
+  goFish.all(function(data) {
     var hbsObject = {goFish: data};
     console.log(hbsObject);
     res.render("index", hbsObject);
@@ -16,7 +18,7 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/goFish", function(req, res) {
-  burger.create(["burger_name"], [req.body.burger_name], function(result) {
+  goFish.create(["goFish"], [req.body.goFish], function(result) {
     /* Send back the ID of the new quote */
     res.json({ id: result.insertId });
   });
@@ -27,7 +29,7 @@ router.put("/api/goFish/:id", function(req, res) {
 
   console.log("condition", condition);
 
-  burger.update({
+  goFish.update({
     devoured: req.body.devour
   }, condition, function(result) {
     if (result.changedRows == 0) {
