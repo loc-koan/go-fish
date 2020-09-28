@@ -30,6 +30,7 @@
     "if-env": "^1.0.4",
     "materialize-css": "^1.0.0-rc.2",
     "mongoose": "^5.10.5",
+    "mysql": "^2.18.1",
     "mysql2": "^2.2.5",
     "orm": "^5.0.5",
     "react-materialize": "^3.9.3",
