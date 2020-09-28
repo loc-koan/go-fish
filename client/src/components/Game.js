@@ -104,7 +104,7 @@ function Game() {
         setHumanTurn(true);
       }
     }
-  }
+  };
 
   function deckAdditionPlayer () { /* after go fish, pushes new card into player hand */ 
     setPlayerHand([...playerHand, pile.shift()]);
@@ -139,9 +139,28 @@ function Game() {
     }
   };
 
-  function calculateWinner () { /* determines winner */ 
-
-  };
+  // function calculateWinner () { /* determines winner */ 
+  //   let endGame = {pile: [],
+  //                  playerHand: [],
+  //                  computerHand: []
+  //                 };
+  //   switch (endGame) {
+  //     case 0:
+  //       humanPairPoint > computerPairPoint;
+  //       alert("you win");
+  //       break;
+  //     case 1:
+  //       humanPairPoint = computerPairPoint;
+  //       alert("tie");
+  //       break;
+  //     case 2:
+  //       humanPairPoint < computerPairPoint;
+  //       alert("you lost");
+  //       break;
+  //     default:
+  //       alert("please refresh the page");
+  //   }
+  // };
 
   return (
     <div>
